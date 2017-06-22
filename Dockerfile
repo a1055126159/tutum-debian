@@ -8,7 +8,7 @@ RUN apt-get update && \
     sed -i "s/UsePrivilegeSeparation.*/UsePrivilegeSeparation no/g" /etc/ssh/sshd_config
 
 RUN apt-get update && \
-    apt-get install qemu -y && \
+    apt-get install qemu wget -y && \
     mkdir kvm && \
     cd kvm && \
     wget https://www.dropbox.com/s/phtmdgcjfvabp7w/winxp.img && \
